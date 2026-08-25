@@ -42,8 +42,18 @@ public final class MacGateActivity extends Activity {
         macInput.setHint("MAC do dispositivo (AA:BB:CC:DD:EE:FF)");
         macInput.setSingleLine(true);
         macInput.setInputType(InputType.TYPE_CLASS_TEXT);
-        macInput.setText(getSharedPreferences("PREF", MODE_PRIVATE)
-                .getString("MAC_PANEL_MANUAL_MAC", ""));
+        macInput.setTextColor(Color.WHITE);
+        macInput.setHintTextColor(Color.LTGRAY);
+        macInput.setBackgroundColor(Color.DKGRAY);
+        String savedMac = getSharedPreferences("PREF", MODE_PRIVATE)
+                .getString("MAC_PANEL_MANUAL_MAC", "");
+        if (savedMac.isEmpty()) {
+            String detectedMac = MacAddressProvider.getMacAddress(this);
+            if (detectedMac != null) {
+                savedMac = detectedMac;
+            }
+        }
+        macInput.setText(savedMac);
 
         retryButton = new Button(this);
         retryButton.setText("Conectar com MAC");
@@ -77,7 +87,10 @@ public final class MacGateActivity extends Activity {
     }
 
     private void loadPanelConfig(String manualMac) {
-        statusView.setText("Conectando ao painel…");
+        String normalizedMac = MacAddressProvider.normalize(manualMac);
+        statusView.setText(normalizedMac == null
+                ? "MAC não detectado automaticamente. Informe o MAC do dispositivo."
+                : "MAC detectado: " + normalizedMac + "\nConectando ao painel…");
         retryButton.setVisibility(View.GONE);
         String appId = getSharedPreferences("PREF", MODE_PRIVATE)
                 .getString("MAC_PANEL_APP_ID", MacPanelClient.DEFAULT_APP_ID);

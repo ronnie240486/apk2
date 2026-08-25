@@ -5,6 +5,9 @@ import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.net.NetworkInterface;
 import java.util.Collections;
 import java.util.Locale;
@@ -63,9 +66,42 @@ public final class MacAddressProvider {
                 }
             }
         } catch (Exception ignored) {
-            // Retorna null para que o fluxo apresente cadastro pendente, sem inventar um MAC.
+            // Continua tentando as interfaces expostas pelo sistema.
+        }
+
+        // Algumas TV Boxes expõem o MAC da interface mesmo quando as APIs Android o ocultam.
+        String fromSysfs = readSysfsInterfaces();
+        if (fromSysfs != null) {
+            return fromSysfs;
         }
         return null;
+    }
+
+    private static String readSysfsInterfaces() {
+        File root = new File("/sys/class/net");
+        File[] interfaces = root.listFiles();
+        if (interfaces == null) {
+            interfaces = new File[]{new File(root, "wlan0"), new File(root, "eth0"), new File(root, "wifi0")};
+        }
+        for (File network : interfaces) {
+            if (network == null || !isCandidateInterface(network.getName())) {
+                continue;
+            }
+            String value = readFirstLine(new File(network, "address"));
+            String normalized = normalize(value);
+            if (normalized != null) {
+                return normalized;
+            }
+        }
+        return null;
+    }
+
+    private static String readFirstLine(File path) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+            return reader.readLine();
+        } catch (Exception ignored) {
+            return null;
+        }
     }
 
     private static boolean isCandidateInterface(String name) {
