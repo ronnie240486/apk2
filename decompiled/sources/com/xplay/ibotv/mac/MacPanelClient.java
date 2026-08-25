@@ -6,10 +6,6 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
 
-import com.google.gson.Gson;
-import com.xplay.ibotv.helper.PreferenceHelper;
-import com.xplay.ibotv.models.AppInfoModel;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -75,6 +71,10 @@ public final class MacPanelClient {
 
         public String getStatus() {
             return json.optString("status", "");
+        }
+
+        public String getError() {
+            return json.optString("error", "");
         }
 
         public boolean isPlaylistSyncRequired() {
@@ -172,6 +172,10 @@ public final class MacPanelClient {
     }
 
     public static void fetchConfig(final Context context, final String baseUrl, final String appId, final Callback callback) {
+        fetchConfig(context, baseUrl, appId, null, callback);
+    }
+
+    public static void fetchConfig(final Context context, final String baseUrl, final String appId, final String macOverride, final Callback callback) {
         if (context == null || callback == null) {
             return;
         }
@@ -179,12 +183,15 @@ public final class MacPanelClient {
             @Override
             public void run() {
                 try {
-                    String mac = MacAddressProvider.getMacAddress(context.getApplicationContext());
+                    String mac = MacAddressProvider.normalize(macOverride);
                     if (mac == null) {
-                        throw new IllegalStateException("Não foi possível obter o MAC deste dispositivo");
+                        mac = MacAddressProvider.getMacAddress(context.getApplicationContext());
+                    }
+                    if (mac == null) {
+                        throw new IllegalStateException("MAC não disponível neste Android; informe o MAC do dispositivo");
                     }
                     String url = buildConfigUrl(baseUrl, appId, mac);
-                    String body = get(url);
+                    String body = getConfig(url);
                     final Config config = new Config(new JSONObject(body), mac);
                     persist(context.getApplicationContext(), config);
                     MAIN.post(new Runnable() {
@@ -203,6 +210,34 @@ public final class MacPanelClient {
                 }
             }
         });
+    }
+
+    static String getConfig(String url) throws Exception {
+        HttpURLConnection connection = (HttpURLConnection) URI.create(url).toURL().openConnection();
+        connection.setRequestMethod("GET");
+        connection.setConnectTimeout(CONNECT_TIMEOUT_MS);
+        connection.setReadTimeout(READ_TIMEOUT_MS);
+        connection.setUseCaches(false);
+        connection.setRequestProperty("Accept", "application/json");
+        try {
+            int status = connection.getResponseCode();
+            InputStream stream = status >= 200 && status < 300
+                    ? connection.getInputStream() : connection.getErrorStream();
+            String body = readUtf8(stream);
+            // O painel usa 404 para MAC não cadastrado, mas o JSON ainda é uma resposta de negócio.
+            if (status == 404 && body.trim().startsWith("{")) {
+                JSONObject json = new JSONObject(body);
+                if (json.has("registered")) {
+                    return body;
+                }
+            }
+            if (status < 200 || status >= 300) {
+                throw new IOException("Painel respondeu HTTP " + status + ": " + body);
+            }
+            return body;
+        } finally {
+            connection.disconnect();
+        }
     }
 
     static String get(String url) throws Exception {
@@ -304,8 +339,8 @@ public final class MacPanelClient {
                 urls.put(item);
             }
             legacy.put("urls", urls);
-            AppInfoModel model = new Gson().fromJson(legacy.toString(), AppInfoModel.class);
-            new PreferenceHelper(context).setSharedPreferenceAppInfo(model);
+            editor.putString("APP_INFO_MODEL", legacy.toString());
+            editor.apply();
         }
     }
 }

@@ -28,7 +28,7 @@ Foram observados riscos que merecem revisão antes de qualquer uso em produção
 
 Foi adicionada uma entrada `MacGateActivity` que consulta a rota universal `GET /api/v5/apps/{appId}/config?mac={MAC}` antes de abrir o conteúdo. O valor inicial de `appId` é `nexus`, conforme o exemplo do PDF, e pode ser alterado em `MacPanelClient.DEFAULT_APP_ID` ou pela preferência `MAC_PANEL_APP_ID`. A URL base está em `MacPanelClient.BASE_URL`.
 
-Quando o painel retorna `registered=true`, `allowed=true` e pelo menos uma `playlist_url`, o adaptador grava a configuração e transforma as URLs em `AppInfoModel` para reaproveitar o pipeline M3U existente. A `MacPanelHeartbeat` envia heartbeat e consulta de avisos a cada 60 segundos, além de fornecer métodos para falha real de reprodução e ACKs. Nenhuma dessas chamadas envia usuário, senha ou cabeçalho de login.
+Quando o painel retorna `registered=true`, `allowed=true` e pelo menos uma `playlist_url`, o adaptador grava a configuração e transforma as URLs em `AppInfoModel` para reaproveitar o pipeline M3U existente. A `MacPanelHeartbeat` envia heartbeat e consulta de avisos a cada 60 segundos, além de fornecer métodos para falha real de reprodução e ACKs. Nenhuma dessas chamadas envia usuário, senha ou cabeçalho de login. A versão v2 também trata o retorno HTTP 404 com `registered=false` como resposta de cadastro e permite informar manualmente o MAC quando o Android não disponibiliza o endereço automaticamente; consulte [`docs/build-v2.md`](docs/build-v2.md).
 
 | Arquivo | Responsabilidade |
 |---|---|
@@ -49,6 +49,7 @@ Quando o painel retorna `registered=true`, `allowed=true` e pelo menos uma `play
 | `scripts/` | Script reprodutível de coleta de metadados |
 | `docs/relatorio.md` | Relatório técnico detalhado, evidências e limitações |
 | `docs/mac-integration.md` | Contrato operacional e instruções do fluxo MAC → painel |
+| `docs/build-v2.md` | Registro da versão de teste v2 e hash do APK gerado |
 
 O APK original, as bibliotecas `.so`, o diretório de ferramentas e arquivos de log volumosos ficam fora da publicação. Como o material de origem é uma descompilação e contém métodos nativos, a alteração é um patch de referência e ainda precisa ser integrada ao projeto-fonte Android original, compilada com o SDK/dependências corretos e assinada com a chave legítima antes de gerar um APK instalável. A chave literal encontrada no código foi substituída por `<REDACTED_TMDB_API_KEY>` na cópia publicada; os valores de configuração nativa continuam representados apenas como dados obfuscados, sem tentativa de executar código nativo.
 

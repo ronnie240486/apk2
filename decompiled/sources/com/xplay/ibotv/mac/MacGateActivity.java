@@ -6,16 +6,16 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.text.InputType;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.xplay.ibotv.MainActivity;
-import com.xplay.ibotv.MainTVActivity;
 
 /** Entrada sem login: configura o aparelho pelo MAC antes de abrir o player. */
 public final class MacGateActivity extends Activity {
     private TextView statusView;
+    private EditText macInput;
     private Button retryButton;
 
     @Override
@@ -38,17 +38,31 @@ public final class MacGateActivity extends Activity {
         statusView.setTextSize(18.0f);
         statusView.setGravity(Gravity.CENTER);
 
+        macInput = new EditText(this);
+        macInput.setHint("MAC do dispositivo (AA:BB:CC:DD:EE:FF)");
+        macInput.setSingleLine(true);
+        macInput.setInputType(InputType.TYPE_CLASS_TEXT);
+        macInput.setText(getSharedPreferences("PREF", MODE_PRIVATE)
+                .getString("MAC_PANEL_MANUAL_MAC", ""));
+
         retryButton = new Button(this);
-        retryButton.setText("Tentar novamente");
-        retryButton.setVisibility(View.GONE);
+        retryButton.setText("Conectar com MAC");
+        retryButton.setVisibility(View.VISIBLE);
         retryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loadPanelConfig();
+                String manualMac = macInput.getText().toString().trim();
+                getSharedPreferences("PREF", MODE_PRIVATE).edit()
+                        .putString("MAC_PANEL_MANUAL_MAC", manualMac)
+                        .apply();
+                loadPanelConfig(manualMac);
             }
         });
 
         root.addView(statusView, new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT));
+        root.addView(macInput, new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT));
         root.addView(retryButton, new LinearLayout.LayoutParams(
@@ -58,16 +72,22 @@ public final class MacGateActivity extends Activity {
     }
 
     private void loadPanelConfig() {
+        String manualMac = macInput == null ? "" : macInput.getText().toString().trim();
+        loadPanelConfig(manualMac);
+    }
+
+    private void loadPanelConfig(String manualMac) {
         statusView.setText("Conectando ao painel…");
         retryButton.setVisibility(View.GONE);
         String appId = getSharedPreferences("PREF", MODE_PRIVATE)
                 .getString("MAC_PANEL_APP_ID", MacPanelClient.DEFAULT_APP_ID);
-        MacPanelClient.fetchConfig(this, MacPanelClient.BASE_URL, appId,
+        MacPanelClient.fetchConfig(this, MacPanelClient.BASE_URL, appId, manualMac,
                 new MacPanelClient.Callback() {
                     @Override
                     public void onSuccess(MacPanelClient.Config config) {
                         if (!config.isRegistered()) {
-                            showBlocked("Aparelho não cadastrado no painel.");
+                            String error = config.getError();
+                            showBlocked(error.isEmpty() ? "Aparelho não cadastrado no painel." : error);
                             return;
                         }
                         if (!config.isAllowed()) {
@@ -80,7 +100,11 @@ public final class MacGateActivity extends Activity {
 
                     @Override
                     public void onFailure(Exception error) {
-                        showBlocked("Não foi possível consultar o painel. Verifique a rede.");
+                        String detail = error.getMessage();
+                        if (detail == null || detail.trim().isEmpty()) {
+                            detail = "Falha desconhecida";
+                        }
+                        showBlocked("Falha ao consultar o painel: " + detail);
                     }
                 });
     }
@@ -88,6 +112,9 @@ public final class MacGateActivity extends Activity {
     private void showBlocked(String message) {
         statusView.setText(message);
         retryButton.setVisibility(View.VISIBLE);
+        if (macInput != null) {
+            macInput.setVisibility(View.VISIBLE);
+        }
     }
 
     private void openPlayer(MacPanelClient.Config config) {

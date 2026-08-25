@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O fluxo substitui o formulário de usuário e senha por uma consulta ao painel usando o MAC disponível no dispositivo. O APK não deve gerar, guardar ou enviar credenciais de login para este fluxo.
+O fluxo substitui o formulário de usuário e senha por uma consulta ao painel usando o MAC disponível no dispositivo. O APK não deve gerar, guardar ou enviar credenciais de login para este fluxo. Se o Android ocultar o MAC automaticamente, o gate permite informar manualmente o MAC do aparelho — isso continua sendo uma identificação por MAC, não um login.
 
 ## Configuração
 
@@ -22,7 +22,7 @@ GET https://renciaapp.manus.space/api/v5/apps/nexus/config?mac=AA%3ABB%3ACC%3ADD
 Accept: application/json
 ```
 
-A resposta deve conter, no mínimo, `registered`, `allowed` e `playlist_urls`. O gate bloqueia o fluxo quando `registered` ou `allowed` forem falsos e também bloqueia quando nenhuma playlist ativa for retornada.
+A resposta deve conter, no mínimo, `registered`, `allowed` e `playlist_urls`. O painel atual pode responder HTTP 404 com JSON `{"registered":false,"error":"MAC não cadastrado."}`; esse 404 é tratado como resposta de negócio, e o gate mostra o motivo em vez de acusar falha de rede. O gate bloqueia o fluxo quando `registered` ou `allowed` forem falsos e também bloqueia quando nenhuma playlist ativa for retornada.
 
 ## Ciclo operacional
 
@@ -37,7 +37,7 @@ As duas chamadas são repetidas a cada 60 segundos. `MacPanelHeartbeat` também 
 
 ## Limitação do MAC
 
-O Android moderno pode ocultar o MAC físico ou fornecer um MAC randomizado. `MacAddressProvider` rejeita valores nulos, zeros e o placeholder `02:00:00:00:00:00`; ele não inventa identificadores. Em uma TV Box gerenciada, valide no dispositivo real qual interface (`wlan`, `eth` ou equivalente) expõe o MAC aceito pelo painel.
+O Android moderno pode ocultar o MAC físico ou fornecer um MAC randomizado. `MacAddressProvider` rejeita valores nulos, zeros e o placeholder `02:00:00:00:00:00`; ele não inventa identificadores. Em uma TV Box gerenciada, valide no dispositivo real qual interface (`wlan`, `eth` ou equivalente) expõe o MAC aceito pelo painel. Em celulares Android, se a mensagem informar que o MAC não está disponível, digite no campo o MAC exibido nas configurações do dispositivo/rede e toque em **Conectar com MAC**.
 
 ## Compilação e assinatura
 
