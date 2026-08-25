@@ -104,11 +104,27 @@ Em dispositivos Amazon, `SettingActivity.goToUpdate()` passa `appInfoModel.getAp
 | Média | `allowBackup=true` e armazenamento legado | Alta | Definir política de backup e migrar para armazenamento moderno |
 | Baixa/condicional | Chave de API embutida no cliente | Alta quanto à presença histórica; impacto depende do serviço | Revogar/rotacionar a chave e aplicar restrições de origem/cota no provedor |
 
-## 11. Limitações
+## 11. Implementação MAC → painel
+
+Com base no PDF fornecido, o projeto agora contém um adaptador para a rota universal `GET /api/v5/apps/{appId}/config?mac={MAC}`, usando a base `https://renciaapp.manus.space`. O `appId` inicial é `nexus`, porque esse é o valor usado no exemplo do documento; antes de distribuir o APK, ele deve ser alterado para a família efetivamente cadastrada no painel em `MacPanelClient.DEFAULT_APP_ID` ou na preferência `MAC_PANEL_APP_ID` [`docs/main-3-routes.pdf`](../docs/main-3-routes.pdf).
+
+A sequência implementada é: obter e normalizar o identificador disponível, chamar a configuração, interromper o fluxo quando `registered` ou `allowed` forem falsos, transformar `playlist_urls` em `AppInfoModel`, carregar a primeira playlist pelo pipeline M3U existente e abrir a Home. A Activity de entrada não contém campos de usuário ou senha. O heartbeat e a consulta de avisos são iniciados após o carregamento, com intervalo de 60 segundos; também foram incluídos métodos para `/api/v5/playback-failure`, `/api/v5/list-notifications/ack` e `/api/v5/remote-commands/ack`.
+
+O manifesto publicado troca os filtros de launcher das Activities legadas por `com.xplay.ibotv.mac.MacGateActivity`. A alteração é deliberadamente um patch sobre código descompilado, não um APK pronto: a lógica nativa original, o SDK Android, as dependências e a assinatura legítima não estão disponíveis nesta análise. Para gerar um APK instalável, o patch precisa ser integrado ao projeto-fonte Android e assinado com a chave autorizada.
+
+O Android 10 ou superior restringe o acesso de aplicativos comuns ao MAC físico/factory MAC e usa randomização por padrão em conexões Wi-Fi. O AOSP também documenta que MACs persistentes ou não persistentes podem variar conforme o perfil de rede e a versão do sistema [10] [11]. Por isso, a implementação rejeita placeholders como `02:00:00:00:00:00` e exibe falha de cadastro quando nenhum MAC utilizável está disponível; em TV Boxes gerenciadas, deve ser validado qual identificador o fabricante expõe.
+
+## 12. Limitações
 
 Não foram realizados testes dinâmicos, captura de tráfego, instrumentação, análise de memória, execução das bibliotecas nativas, validação de login, verificação de assinatura no Android ou confirmação de quais URLs são devolvidas pela configuração remota. Também não é possível inferir propriedade, intenção, licenciamento ou legitimidade do aplicativo somente pelo conteúdo do APK.
 
 A fonte Java descompilada deve ser tratada como material de investigação. Ela pode conter artefatos do descompilador, nomes sintéticos, código de bibliotecas de terceiros e métodos `native` sem corpo. O repositório não é um projeto Android recompilável e não deve ser usado para redistribuição ou publicação pública sem revisão jurídica e autorização do titular.
+
+## Referências locais e externas
+
+[9]: ../docs/main-3-routes.pdf "Contrato de rotas fornecido pelo usuário"
+[10]: https://source.android.com/docs/core/permissions/immutable-device-ids "AOSP — Immutable device IDs"
+[11]: https://source.android.com/docs/core/connect/wifi-mac-randomization-behavior "AOSP — MAC randomization behavior"
 
 ## Referências locais
 

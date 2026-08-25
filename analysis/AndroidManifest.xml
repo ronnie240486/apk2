@@ -215,26 +215,33 @@
             android:screenOrientation="landscape"/>
         <activity
             android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.xplay.ibotv.mac.MacHomeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
             android:label="@string/app_name"
-            android:name="com.xplay.ibotv.MainActivity"
+            android:name="com.xplay.ibotv.mac.MacGateActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/app_name"
+            android:name="com.xplay.ibotv.MainActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:theme="@style/LeanbackTheme"
             android:label="@string/app_name"
             android:name="com.xplay.ibotv.MainTVActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <provider
             android:name="androidx.core.content.FileProvider"
             android:exported="false"

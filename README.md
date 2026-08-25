@@ -24,6 +24,21 @@ O APK possui três arquivos DEX, totalizando **15.901 classes**, além de 20 bib
 
 Foram observados riscos que merecem revisão antes de qualquer uso em produção: `android:usesCleartextTraffic="true"`, permissões de armazenamento externo e escrita de configurações, persistência de servidor/usuário/senha em `SharedPreferences`, montagem de URLs com credenciais na query string, um cliente TLS permissivo embarcado e um canal de atualização que pode baixar e iniciar a instalação de um APK. A presença de uma classe insegura no artefato não prova, por si só, que ela é chamada em todos os fluxos; o relatório separa evidência de inferência [`docs/relatorio.md`](docs/relatorio.md).
 
+## Alteração implementada: MAC → painel
+
+Foi adicionada uma entrada `MacGateActivity` que consulta a rota universal `GET /api/v5/apps/{appId}/config?mac={MAC}` antes de abrir o conteúdo. O valor inicial de `appId` é `nexus`, conforme o exemplo do PDF, e pode ser alterado em `MacPanelClient.DEFAULT_APP_ID` ou pela preferência `MAC_PANEL_APP_ID`. A URL base está em `MacPanelClient.BASE_URL`.
+
+Quando o painel retorna `registered=true`, `allowed=true` e pelo menos uma `playlist_url`, o adaptador grava a configuração e transforma as URLs em `AppInfoModel` para reaproveitar o pipeline M3U existente. A `MacPanelHeartbeat` envia heartbeat e consulta de avisos a cada 60 segundos, além de fornecer métodos para falha real de reprodução e ACKs. Nenhuma dessas chamadas envia usuário, senha ou cabeçalho de login.
+
+| Arquivo | Responsabilidade |
+|---|---|
+| `decompiled/sources/com/xplay/ibotv/mac/MacAddressProvider.java` | Normaliza `AA:BB:CC:DD:EE:FF` e tenta obter o MAC disponível no ambiente |
+| `decompiled/sources/com/xplay/ibotv/mac/MacPanelClient.java` | Consulta configuração, valida status e adapta playlists |
+| `decompiled/sources/com/xplay/ibotv/mac/MacPanelHeartbeat.java` | Heartbeat, avisos, falhas e confirmações |
+| `decompiled/sources/com/xplay/ibotv/mac/MacGateActivity.java` | Entrada sem tela de login |
+| `decompiled/sources/com/xplay/ibotv/mac/MacHomeActivity.java` | Carrega M3U e abre a Home legada |
+| `docs/main-3-routes.pdf` | Contrato de rotas fornecido para a integração |
+
 ## Estrutura
 
 | Caminho | Conteúdo |
@@ -33,8 +48,9 @@ Foram observados riscos que merecem revisão antes de qualquer uso em produção
 | `decompiled/resources/` | Recursos textuais decodificados, XML e HTML |
 | `scripts/` | Script reprodutível de coleta de metadados |
 | `docs/relatorio.md` | Relatório técnico detalhado, evidências e limitações |
+| `docs/mac-integration.md` | Contrato operacional e instruções do fluxo MAC → painel |
 
-O APK original, as bibliotecas `.so`, o diretório de ferramentas e arquivos de log volumosos ficam fora da publicação. A chave literal encontrada no código foi substituída por `<REDACTED_TMDB_API_KEY>` na cópia publicada; os valores de configuração nativa continuam representados apenas como dados obfuscados, sem tentativa de executar código nativo.
+O APK original, as bibliotecas `.so`, o diretório de ferramentas e arquivos de log volumosos ficam fora da publicação. Como o material de origem é uma descompilação e contém métodos nativos, a alteração é um patch de referência e ainda precisa ser integrada ao projeto-fonte Android original, compilada com o SDK/dependências corretos e assinada com a chave legítima antes de gerar um APK instalável. A chave literal encontrada no código foi substituída por `<REDACTED_TMDB_API_KEY>` na cópia publicada; os valores de configuração nativa continuam representados apenas como dados obfuscados, sem tentativa de executar código nativo.
 
 ## Reprodução local
 

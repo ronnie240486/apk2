@@ -32,6 +32,7 @@ import com.xplay.ibotv.dlgfragment.AccountDlgFragment;
 import com.xplay.ibotv.dlgfragment.ExitDlgFragment;
 import com.xplay.ibotv.dlgfragment.NoConnectionDlgFragment;
 import com.xplay.ibotv.helper.GetSharedInfo;
+import com.xplay.ibotv.mac.MacPanelHeartbeat;
 import com.xplay.ibotv.helper.PreferenceHelper;
 import com.xplay.ibotv.models.AppInfoModel;
 import com.xplay.ibotv.models.LoginModel;
@@ -72,6 +73,7 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     public TextView txt_version;
     public WordModels wordModels = new WordModels();
     public ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new HomeActivity$$ExternalSyntheticLambda0(this));
+    private MacPanelHeartbeat macPanelHeartbeat;
 
     private void changeStringsInApp() {
         WordModels wordModel = GetSharedInfo.getWordModel(this);
@@ -337,6 +339,11 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     public final void onCreate(Bundle bundle) throws PackageManager.NameNotFoundException {
         int i;
         super.onCreate(bundle);
+        String mac = new PreferenceHelper(this).getSharedPreferenceMacAddress();
+        if (mac != null) {
+            macPanelHeartbeat = new MacPanelHeartbeat(this, mac);
+            macPanelHeartbeat.start();
+        }
         initializeApikey(this);
         initializeAgent(this);
         copyBxLoginToXp(this);
@@ -432,5 +439,13 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         sbM26m.append(LTVApp.version_name);
         textView.setText(sbM26m.toString());
         this.ly_live.requestFocus();
+    }
+
+    @Override
+    protected void onStop() {
+        if (macPanelHeartbeat != null) {
+            macPanelHeartbeat.stop();
+        }
+        super.onStop();
     }
 }
