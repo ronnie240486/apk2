@@ -1,0 +1,23 @@
+package org.androidannotations.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+/* JADX INFO: loaded from: classes2.dex */
+@Target({ElementType.METHOD})
+@Retention(RetentionPolicy.CLASS)
+public @interface ReceiverAction {
+
+    /* JADX INFO: loaded from: classes3.dex */
+    @Target({ElementType.PARAMETER})
+    @Retention(RetentionPolicy.CLASS)
+    public @interface Extra {
+        String value() default "";
+    }
+
+    String[] dataSchemes() default {};
+
+    String value() default "";
+}

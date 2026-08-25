@@ -1,0 +1,64 @@
+== arquivos nativos ==
+analysis/native/lib/arm64-v8a/libboxbr.so 268672 bytes
+analysis/native/lib/arm64-v8a/libboxbrpro.so 164040 bytes
+analysis/native/lib/arm64-v8a/libffmpegJNI.so 1409224 bytes
+analysis/native/lib/arm64-v8a/libpl_droidsonroids_gif.so 42928 bytes
+analysis/native/lib/arm64-v8a/librealm-jni.so 6796416 bytes
+analysis/native/lib/armeabi-v7a/libboxbr.so 143804 bytes
+analysis/native/lib/armeabi-v7a/libboxbrpro.so 147280 bytes
+analysis/native/lib/armeabi-v7a/libffmpegJNI.so 1357940 bytes
+analysis/native/lib/armeabi-v7a/libpl_droidsonroids_gif.so 42636 bytes
+analysis/native/lib/armeabi-v7a/librealm-jni.so 5042504 bytes
+analysis/native/lib/x86/libboxbr.so 273564 bytes
+analysis/native/lib/x86/libboxbrpro.so 163048 bytes
+analysis/native/lib/x86/libffmpegJNI.so 1443892 bytes
+analysis/native/lib/x86/libpl_droidsonroids_gif.so 42532 bytes
+analysis/native/lib/x86/librealm-jni.so 7417132 bytes
+analysis/native/lib/x86_64/libboxbr.so 288072 bytes
+analysis/native/lib/x86_64/libboxbrpro.so 167736 bytes
+analysis/native/lib/x86_64/libffmpegJNI.so 1622488 bytes
+analysis/native/lib/x86_64/libpl_droidsonroids_gif.so 43192 bytes
+analysis/native/lib/x86_64/librealm-jni.so 7705816 bytes
+== arquiteturas ==
+analysis/native/lib/arm64-v8a/libboxbr.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=c43f986cc0e74abc13895273b1ff5b31cd2c9168, stripped
+analysis/native/lib/arm64-v8a/libboxbrpro.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=e1ea0decd860d953fc107bbb7457ae791cddc08a, stripped
+analysis/native/lib/arm64-v8a/libffmpegJNI.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=3537312be649cea994d15abd78ccb4ecde2335e9, stripped
+analysis/native/lib/arm64-v8a/libpl_droidsonroids_gif.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=af153094f7acbf371f7e6035ed8796b3da9080ef, stripped
+analysis/native/lib/arm64-v8a/librealm-jni.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=66bd01db16a296f52810d5642ecfb49e652ae9a9, stripped
+analysis/native/lib/armeabi-v7a/libboxbr.so: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=6438ce60b026ad464d8f8a9820031963f949cf37, stripped
+analysis/native/lib/armeabi-v7a/libboxbrpro.so: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=23792eb735bbfb7189d2622969b3298c2090ff56, stripped
+analysis/native/lib/armeabi-v7a/libffmpegJNI.so: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=4f9974bae214da3d3d190a197aa6fa1a743d748f, stripped
+analysis/native/lib/armeabi-v7a/libpl_droidsonroids_gif.so: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=0914cb5f82fff46cae910f6264d2539a9879484d, stripped
+analysis/native/lib/armeabi-v7a/librealm-jni.so: ELF 32-bit LSB shared object, ARM, EABI5 version 1 (SYSV), dynamically linked, BuildID[sha1]=307bf63e0705c82f63e0fae556f9ee7723de08c6, stripped
+analysis/native/lib/x86/libboxbr.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, BuildID[sha1]=1e3d7d1389652156b5d002cbc60c484d2023622b, stripped
+analysis/native/lib/x86/libboxbrpro.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, BuildID[sha1]=bd79fe3c1d8ee98d197220d6e43d3bbad84966c9, stripped
+analysis/native/lib/x86/libffmpegJNI.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, BuildID[sha1]=c76d54bf3debbc030c5b3baafab5753065a04223, stripped
+analysis/native/lib/x86/libpl_droidsonroids_gif.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, BuildID[sha1]=b3e2351943eb767a2aa498ae942e7d327b7a6c72, stripped
+analysis/native/lib/x86/librealm-jni.so: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, BuildID[sha1]=524c813fbfc3a039a2ab2c9ebc1475c40f28dcee, stripped
+analysis/native/lib/x86_64/libboxbr.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=d9276b44200806dc3073ce7e7ccb419b0f99198c, stripped
+analysis/native/lib/x86_64/libboxbrpro.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=a2c93c09d40cfeac67b016517aa9a1e1c7fdac91, stripped
+analysis/native/lib/x86_64/libffmpegJNI.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=0235f08ed67059f91fc7f92abfdd76903f99940c, stripped
+analysis/native/lib/x86_64/libpl_droidsonroids_gif.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=6ed3b96cc4d647f1416bb95e9b39908c2b279b33, stripped
+analysis/native/lib/x86_64/librealm-jni.so: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=a395e13b8ae2b9414ba900124aa0d8075ec6ec31, stripped
+== símbolos JNI exportados ==
+## analysis/native/lib/arm64-v8a/libboxbr.so
+## analysis/native/lib/arm64-v8a/libboxbrpro.so
+## analysis/native/lib/arm64-v8a/libffmpegJNI.so
+## analysis/native/lib/arm64-v8a/libpl_droidsonroids_gif.so
+## analysis/native/lib/arm64-v8a/librealm-jni.so
+## analysis/native/lib/armeabi-v7a/libboxbr.so
+## analysis/native/lib/armeabi-v7a/libboxbrpro.so
+## analysis/native/lib/armeabi-v7a/libffmpegJNI.so
+## analysis/native/lib/armeabi-v7a/libpl_droidsonroids_gif.so
+## analysis/native/lib/armeabi-v7a/librealm-jni.so
+## analysis/native/lib/x86/libboxbr.so
+## analysis/native/lib/x86/libboxbrpro.so
+## analysis/native/lib/x86/libffmpegJNI.so
+## analysis/native/lib/x86/libpl_droidsonroids_gif.so
+## analysis/native/lib/x86/librealm-jni.so
+## analysis/native/lib/x86_64/libboxbr.so
+## analysis/native/lib/x86_64/libboxbrpro.so
+## analysis/native/lib/x86_64/libffmpegJNI.so
+## analysis/native/lib/x86_64/libpl_droidsonroids_gif.so
+## analysis/native/lib/x86_64/librealm-jni.so
+== strings relevantes ==

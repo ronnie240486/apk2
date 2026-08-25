@@ -1,0 +1,447 @@
+== pacotes do aplicativo ==
+decompiled/java/sources/com/boxbrapks/PasswordEditText.java
+decompiled/java/sources/com/boxbrapks/UsernameEditText.java
+decompiled/java/sources/com/boxbrapks/BxApplication.java
+decompiled/java/sources/com/boxbrapks/model/UserAccountModel.java
+decompiled/java/sources/com/boxbrapks/model/LoginTaskResponse.java
+decompiled/java/sources/com/boxbrapks/BxAppSecurity.java
+decompiled/java/sources/com/boxbrapks/task/BxCheckUserTask.java
+decompiled/java/sources/com/boxbrapks/task/BxValidateLoginTask.java
+decompiled/java/sources/com/boxbrapks/BxLoginActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity$$ExternalSyntheticLambda2.java
+decompiled/java/sources/com/xplay/ibotv/activities/MoviePlayerActivity$$ExternalSyntheticLambda2.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveChannelActivity$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesPlayerActivity$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/activities/TrailerActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieSecondActivity$1$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieActivity$1$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesSecondActivity$1$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/MovieMobilePlayer$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/LiveChannelMobileActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/LiveMobileActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/LiveMobileActivity$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/LiveChannelMobileActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/LiveMobileActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/SeriesMobilePlayer.java
+decompiled/java/sources/com/xplay/ibotv/activities/mobile/MovieMobilePlayer.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesActivity$1$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesInfoActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity$$ExternalSyntheticLambda3.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveChannelActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeasonActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/ChangePlaylistActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SearchActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/HomeActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesPlayerActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity$$ExternalSyntheticLambda5.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity$$ExternalSyntheticLambda4.java
+decompiled/java/sources/com/xplay/ibotv/activities/SettingActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieActivity$$ExternalSyntheticLambda2.java
+decompiled/java/sources/com/xplay/ibotv/activities/MoviePlayerActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/ChangePlaylistActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieSecondActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieInfoActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeasonActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieActivity$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesInfoActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesSecondActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SearchActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SettingActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/CatchUpPlayerActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/TrailerActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/CatchUpActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/MovieCreditActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveChannelActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/LiveActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/CategoryActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/MoviePlayerActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/SeriesPlayerActivity.java
+decompiled/java/sources/com/xplay/ibotv/activities/HomeActivity.java
+decompiled/java/sources/com/xplay/ibotv/net/BaseCommand.java
+decompiled/java/sources/com/xplay/ibotv/net/NetworkUtil.java
+decompiled/java/sources/com/xplay/ibotv/net/NetworkTask.java
+decompiled/java/sources/com/xplay/ibotv/net/LoadM3UItemsCommand.java
+decompiled/java/sources/com/xplay/ibotv/net/FetchM3uItemsTask.java
+decompiled/java/sources/com/xplay/ibotv/net/LoadChannelsCommand.java
+decompiled/java/sources/com/xplay/ibotv/net/FetchChannelsTask.java
+decompiled/java/sources/com/xplay/ibotv/net/LoadVideosCommand.java
+decompiled/java/sources/com/xplay/ibotv/net/FetchVideosTask.java
+decompiled/java/sources/com/xplay/ibotv/net/LoadEpisodeCommand.java
+decompiled/java/sources/com/xplay/ibotv/net/FetchEpisodeTask.java
+decompiled/java/sources/com/xplay/ibotv/BuildConfig.java
+decompiled/java/sources/com/xplay/ibotv/C2108R.java
+decompiled/java/sources/com/xplay/ibotv/adapter/SortSpinnerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/LiveSortRecyclerAdapter$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/adapter/SeasonRecyclerAdapter$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/adapter/VodRecyclerAdapter$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/adapter/HideCategoryRecyclerViewAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/LiveSortRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/ConnectPlaylistAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/DateRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/LanguageRecyclerViewAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/SeasonRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/EpgRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/SettingRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/SubtitleColorRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/ProgramRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/PortalRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/CastRecyclerAdapter$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/adapter/VodRecyclerAdapter$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/adapter/MovieCreditRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerVodHomeAdapter$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/adapter/VodRecyclerAdapter$$ExternalSyntheticLambda2.java
+decompiled/java/sources/com/xplay/ibotv/adapter/EpisodeHorizontalRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/PlayEpisodeRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerSeriesHomeAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerLiveHomeAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerVodHomeAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerLiveChannelAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerLiveCategoryAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RecyclerVodCategoryAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/RealmRecyclerViewAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/SeriesRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/VodRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/CastRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/adapter/EpisodeRecyclerAdapter.java
+decompiled/java/sources/com/xplay/ibotv/apps/FocusStatus.java
+decompiled/java/sources/com/xplay/ibotv/apps/HomeType.java
+decompiled/java/sources/com/xplay/ibotv/apps/SideMenu.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda4.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseTVActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/apps/Constants.java
+decompiled/java/sources/com/xplay/ibotv/apps/LTVApp.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda7.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda8.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda5.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda6.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$5$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda3.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda2.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseTVActivity.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/apps/BaseActivity$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/helper/RealmChangeItemListener.java
+decompiled/java/sources/com/xplay/ibotv/helper/SimpleGestureFilter.java
+decompiled/java/sources/com/xplay/ibotv/helper/PreferenceHelper.java
+decompiled/java/sources/com/xplay/ibotv/helper/GetSharedInfo.java
+decompiled/java/sources/com/xplay/ibotv/helper/RealmController$$ExternalSyntheticLambda2.java
+decompiled/java/sources/com/xplay/ibotv/helper/RealmController$$ExternalSyntheticLambda0.java
+decompiled/java/sources/com/xplay/ibotv/helper/RealmController$$ExternalSyntheticLambda1.java
+decompiled/java/sources/com/xplay/ibotv/helper/StartSnapHelper.java
+decompiled/java/sources/com/xplay/ibotv/helper/RealmController.java
+decompiled/java/sources/com/xplay/ibotv/models/ResumeModel.java
+decompiled/java/sources/com/xplay/ibotv/models/ResumeSeriesModel.java
+decompiled/java/sources/com/xplay/ibotv/models/SubTitleUserModel.java
+decompiled/java/sources/com/xplay/ibotv/models/SubtitleLinkModel.java
+decompiled/java/sources/com/xplay/ibotv/models/SubtitleModel.java
+decompiled/java/sources/com/xplay/ibotv/models/WordModels.java
+decompiled/java/sources/com/xplay/ibotv/models/CatchUpEpg.java
+decompiled/java/sources/com/xplay/ibotv/models/CatchupModel.java
+decompiled/java/sources/com/xplay/ibotv/models/LanguageModel.java
+decompiled/java/sources/com/xplay/ibotv/models/AppInfoModel.java
+decompiled/java/sources/com/xplay/ibotv/models/EpisodeInfoModel.java
+decompiled/java/sources/com/xplay/ibotv/models/CastModel.java
+decompiled/java/sources/com/xplay/ibotv/models/Episode.java
+decompiled/java/sources/com/xplay/ibotv/models/Info.java
+decompiled/java/sources/com/xplay/ibotv/models/MovieCreditModel.java
+decompiled/java/sources/com/xplay/ibotv/models/LoginModel.java
+decompiled/java/sources/com/xplay/ibotv/models/MovieData.java
+decompiled/java/sources/com/xplay/ibotv/models/ServerModel.java
+decompiled/java/sources/com/xplay/ibotv/models/TMDBResponse.java
+decompiled/java/sources/com/xplay/ibotv/models/MovieInfo.java
+decompiled/java/sources/com/xplay/ibotv/models/TMDBVideoModel.java
+decompiled/java/sources/com/xplay/ibotv/models/CategoryModel.java
+decompiled/java/sources/com/xplay/ibotv/models/CastResponse.java
+decompiled/java/sources/com/xplay/ibotv/models/MovieCreditResponse.java
+== URLs e esquemas ==
+http://0.0.0.0:1234
+http://dashif.org/guidelines/last-segment-number
+http://dashif.org/guidelines/trickmode
+http://i.ytimg.com/vi/
+http://localhost/
+http://ns.adobe.com/xap/1.0/
+http://schemas.android.com/apk/res-auto
+http://schemas.android.com/apk/res/android
+http://schemas.microsoft.com/DRM/2007/03/protocols/AcquireLicense
+http://www.w3.org/ns/ttml#parameter
+http://www.youtube.com/watch?v=
+https://aomedia.org/emsg/ID3
+https://developer.android.com/reference/com/google/android/play/core/assetpacks/model/AssetPackErrorCode.html#
+https://developer.android.com/reference/com/google/android/play/core/install/model/InstallErrorCode#
+https://developer.android.com/reference/com/google/android/play/core/review/model/ReviewErrorCode.html#
+https://developer.android.com/reference/com/google/android/play/core/splitinstall/model/SplitInstallErrorCode.html#
+https://developer.apple.com/streaming/emsg-id3
+https://docs.mongodb.com/realm/sdk/android/install/#customize-dependecies-defined-by-the-realm-gradle-plugin
+https://exoplayer.dev/issues/cleartext-not-permitted
+https://exoplayer.dev/issues/player-accessed-on-wrong-thread
+https://github.com/Kotlin/kotlinx.coroutines#android
+https://github.com/realm/realm-java/tree/master/examples/rxJavaExample
+https://issuetracker.google.com/issues/36918154
+https://play.google.com/store/apps/details?id=
+https://play.google.com/store/apps/details?id=com.mxtech.videoplayer.ad
+https://play.google.com/store/apps/details?id=org.videolan.vlc&hl=en_US
+https://plus.google.com/
+https://realm.io/docs/java/latest/#rxjava
+https://www.googleapis.com/auth/appstate
+https://www.googleapis.com/auth/datastoremobile
+https://www.googleapis.com/auth/drive
+https://www.googleapis.com/auth/drive.appdata
+https://www.googleapis.com/auth/drive.apps
+https://www.googleapis.com/auth/drive.file
+https://www.googleapis.com/auth/games
+https://www.googleapis.com/auth/games.firstparty
+https://www.googleapis.com/auth/games_lite
+https://www.googleapis.com/auth/plus.login
+https://www.googleapis.com/auth/plus.me
+https://www.youtube.com/watch?v=
+https://x
+https://x</LA_URL>
+https://youtube.com
+https://youtube.com/watch?v=
+== WebView / rede / credenciais ==
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2263:        public static Token fromBundle(Bundle tokenBundle) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2264:            if (tokenBundle == null) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2267:            tokenBundle.setClassLoader(Token.class.getClassLoader());
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2268:            IMediaSession iMediaSessionAsInterface = IMediaSession.Stub.asInterface(BundleCompat.getBinder(tokenBundle, MediaSessionCompat.KEY_EXTRA_BINDER));
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2269:            VersionedParcelable versionedParcelable = ParcelUtils.getVersionedParcelable(tokenBundle, MediaSessionCompat.KEY_SESSION2_TOKEN);
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2270:            Token token = (Token) tokenBundle.getParcelable(MediaSessionCompat.KEY_TOKEN);
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2271:            if (token == null) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2274:            return new Token(token.mInner, iMediaSessionAsInterface, versionedParcelable);
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2277:        public static Token fromToken(Object token) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2278:            return fromToken(token, null);
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2293:            Token token = (Token) obj;
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2296:                return token.mInner == null;
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2298:            Object obj3 = token.mInner;
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2376:        public static Token fromToken(Object token, IMediaSession extraBinder) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2377:            if (token == null) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2380:            if (token instanceof MediaSession.Token) {
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2381:                return new Token(token, extraBinder);
+decompiled/java/sources/android/support/v4/media/session/MediaSessionCompat.java:2383:            throw new IllegalArgumentException("token is not a valid MediaSession.Token object");
+decompiled/java/sources/android/support/v4/media/session/MediaControllerCompat.java:1590:        public MediaControllerImplBase(MediaSessionCompat.Token token) {
+decompiled/java/sources/android/support/v4/media/session/MediaControllerCompat.java:1591:            this.mBinder = IMediaSession.Stub.asInterface((IBinder) token.getToken());
+decompiled/java/sources/androidx/appcompat/widget/TooltipPopup.java:54:        layoutParams.token = view.getApplicationWindowToken();
+decompiled/java/sources/androidx/appcompat/view/menu/MenuDialogHelper.java:109:            attributes.token = iBinder;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:8:    public char[] tokenFalse;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:9:    public char[] tokenNull;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:10:    public char[] tokenTrue;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:52:        this.tokenTrue = "true".toCharArray();
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:53:        this.tokenFalse = "false".toCharArray();
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:54:        this.tokenNull = "null".toCharArray();
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:69:        StringBuilder sbM26m = Insets$$ExternalSyntheticOutline0.m26m("this token is not a boolean: <");
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:83:        StringBuilder sbM26m = Insets$$ExternalSyntheticOutline0.m26m("this token is not a null: <");
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:106:            char[] cArr = this.tokenTrue;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:113:            char[] cArr2 = this.tokenFalse;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:120:            char[] cArr3 = this.tokenNull;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:127:            char[] cArr4 = this.tokenTrue;
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:131:            } else if (this.tokenFalse[i5] == c) {
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLToken.java:133:            } else if (this.tokenNull[i5] == c) {
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLParser.java:148:                        throw new CLParsingException("incorrect token <" + c + "> at line " + this.lineNumber, cLToken);
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLParser.java:254:                                        StringBuilder sbM26m = Insets$$ExternalSyntheticOutline0.m26m("parsing incorrect token ");
+decompiled/java/sources/androidx/constraintlayout/core/parser/CLParser.java:334:                                    StringBuilder sbM26m2 = Insets$$ExternalSyntheticOutline0.m26m("parsing incorrect token ");
+decompiled/java/sources/androidx/core/app/AppLaunchChecker.java:7:import android.content.SharedPreferences;
+decompiled/java/sources/androidx/core/app/AppLaunchChecker.java:22:        return context.getSharedPreferences(SHARED_PREFS_NAME, 0).getBoolean(KEY_STARTED_FROM_LAUNCHER, false);
+decompiled/java/sources/androidx/core/app/AppLaunchChecker.java:27:        SharedPreferences sharedPreferences = activity.getSharedPreferences(SHARED_PREFS_NAME, 0);
+decompiled/java/sources/androidx/core/app/ActivityRecreator.java:27:    public static final Field tokenField;
+decompiled/java/sources/androidx/core/app/ActivityRecreator.java:86:        tokenField = getTokenField();
+decompiled/java/sources/androidx/core/app/ActivityRecreator.java:169:            final Object obj2 = tokenField.get(activity);
+decompiled/java/sources/androidx/core/app/ActivityRecreator.java:213:            final Object obj2 = tokenField.get(activity);
+decompiled/java/sources/androidx/core/content/SharedPreferencesCompat.java:3:import android.content.SharedPreferences;
+decompiled/java/sources/androidx/core/content/SharedPreferencesCompat.java:8:public final class SharedPreferencesCompat {
+decompiled/java/sources/androidx/core/content/SharedPreferencesCompat.java:17:            public void apply(@NonNull SharedPreferences.Editor editor) {
+decompiled/java/sources/androidx/core/content/SharedPreferencesCompat.java:38:        public void apply(@NonNull SharedPreferences.Editor editor) {
+decompiled/java/sources/androidx/core/content/SharedPreferencesCompat.java:43:    private SharedPreferencesCompat() {
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:4:import android.content.SharedPreferences;
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:11:/* JADX INFO: compiled from: SharedPreferences.kt */
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:13:@Metadata(m314d1 = {"\u0000 \n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\u001a3\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\b\b\u0002\u0010\u0003\u001a\u00020\u00042\u0017\u0010\u0005\u001a\u0013\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\u00010\u0006¢\u0006\u0002\b\bH\u0087\bø\u0001\u0000\u0082\u0002\u0007\n\u0005\b\u009920\u0001¨\u0006\t"}, m315d2 = {"edit", "", "Landroid/content/SharedPreferences;", "commit", "", "action", "Lkotlin/Function1;", "Landroid/content/SharedPreferences$Editor;", "Lkotlin/ExtensionFunctionType;", "core-ktx_release"}, m316k = 2, m317mv = {1, 6, 0}, m319xi = 48)
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:14:public final class SharedPreferencesKt {
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:16:    public static final void edit(@NotNull SharedPreferences sharedPreferences, boolean z, @NotNull Function1<? super SharedPreferences.Editor, Unit> action) {
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:19:        SharedPreferences.Editor editor = sharedPreferences.edit();
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:29:    public static /* synthetic */ void edit$default(SharedPreferences sharedPreferences, boolean z, Function1 action, int i, Object obj) {
+decompiled/java/sources/androidx/core/content/SharedPreferencesKt.java:35:        SharedPreferences.Editor editor = sharedPreferences.edit();
+decompiled/java/sources/androidx/core/os/HandlerKt.java:13:@Metadata(m314d1 = {"\u0000$\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\t\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\u001a4\u0010\u0000\u001a\u00020\u0001*\u00020\u00022\u0006\u0010\u0003\u001a\u00020\u00042\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00062\u000e\b\u0004\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bH\u0086\bø\u0001\u0000\u001a4\u0010\n\u001a\u00020\u0001*\u00020\u00022\u0006\u0010\u000b\u001a\u00020\u00042\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00062\u000e\b\u0004\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bH\u0086\bø\u0001\u0000\u0082\u0002\u0007\n\u0005\b\u009920\u0001¨\u0006\f"}, m315d2 = {"postAtTime", "Ljava/lang/Runnable;", "Landroid/os/Handler;", "uptimeMillis", "", "token", "", "action", "Lkotlin/Function0;", "", "postDelayed", "delayInMillis", "core-ktx_release"}, m316k = 2, m317mv = {1, 6, 0}, m319xi = 48)
+decompiled/java/sources/androidx/core/text/util/LinkifyCompat.java:9:import android.webkit.WebView;
+decompiled/java/sources/androidx/core/text/util/LinkifyCompat.java:121:        return Build.VERSION.SDK_INT >= 28 ? WebView.findAddress(str) : FindAddress.findAddress(str);
+decompiled/java/sources/androidx/core/view/accessibility/AccessibilityNodeInfoCompat.java:1287:        sb.append("; password: ");
+decompiled/java/sources/androidx/exifinterface/media/ExifInterface.java:62:import okhttp3.internal.p021ws.WebSocketProtocol;
+decompiled/java/sources/androidx/media/MediaBrowserProtocol.java:19:    public static final String DATA_CALLBACK_TOKEN = "data_callback_token";
+decompiled/java/sources/androidx/media/MediaBrowserProtocol.java:26:    public static final String DATA_MEDIA_SESSION_TOKEN = "data_media_session_token";
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:43:        public static Notification.MediaStyle fillInMediaStyle(Notification.MediaStyle style, int[] actionsToShowInCompact, MediaSessionCompat.Token token) {
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:47:            if (token != null) {
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:48:                setMediaSession(style, (MediaSession.Token) token.getToken());
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:54:        public static void setMediaSession(Notification.MediaStyle style, MediaSession.Token token) {
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:55:            style.setMediaSession(token);
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:255:        public MediaStyle setMediaSession(MediaSessionCompat.Token token) {
+decompiled/java/sources/androidx/media/app/NotificationCompat.java:256:            this.mToken = token;
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:144:        void setSessionToken(MediaSessionCompat.Token token);
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:372:        public void setSessionToken(final MediaSessionCompat.Token token) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:380:                            next.callbacks.onConnect(next.root.getRootId(), token, next.root.getExtras());
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:552:        public void addSubscription(final String id, final IBinder token, final Bundle options, final ServiceCallbacks callbacks) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:565:                    IBinder iBinder = token;
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:733:        public void removeSubscription(final String id, final IBinder token, final ServiceCallbacks callbacks) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:746:                    IBinder iBinder = token;
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1175:    public void setSessionToken(MediaSessionCompat.Token token) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1176:        if (token == null) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1177:            throw new IllegalArgumentException("Session token may not be null");
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1180:            throw new IllegalStateException("The session token has already been set");
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1182:        this.mSession = token;
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1183:        this.mImpl.setSessionToken(token);
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1298:                MediaSessionCompat.Token token = MediaBrowserServiceCompat.this.mSession;
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1299:                if (token != null) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1300:                    IMediaSession extraBinder = token.getExtraBinder();
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1360:        public void setSessionToken(final MediaSessionCompat.Token token) {
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1368:                    MediaSessionCompat.Token token2 = token;
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1370:                        IMediaSession extraBinder = token2.getExtraBinder();
+decompiled/java/sources/androidx/media/MediaBrowserServiceCompat.java:1379:                    mediaBrowserServiceImplApi21.mServiceFwk.setSessionToken((MediaSession.Token) token2.getToken());
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:4:import android.content.SharedPreferences;
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:174:    private static SharedPreferences getMultiDexPreferences(Context context) {
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:175:        return context.getSharedPreferences(PREFS_FILE, 4);
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:210:        SharedPreferences multiDexPreferences = getMultiDexPreferences(context);
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:222:        SharedPreferences multiDexPreferences = getMultiDexPreferences(context);
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:240:                SharedPreferences sharedPreferences = multiDexPreferences;
+decompiled/java/sources/androidx/multidex/MultiDexExtractor.java:317:        SharedPreferences.Editor editorEdit = getMultiDexPreferences(context).edit();
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:28:import java.net.HttpURLConnection;
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:140:            HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(sbM26m.toString()).openConnection();
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:245:                    decipherViaWebView(sparseArray);
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:260:            decipherViaWebView(sparseArray);
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:265:    private void decipherViaWebView(SparseArray<String> sparseArray) {
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:318:        HttpURLConnection httpURLConnection;
+decompiled/java/sources/at/huber/youtubeExtractor/YouTubeExtractor.java:332:            httpURLConnection = (HttpURLConnection) new URL(sbM26m.toString()).openConnection();
+decompiled/java/sources/com/android/volley/toolbox/AndroidAuthenticator.java:39:                string = result.getString("authtoken");
+decompiled/java/sources/com/android/volley/toolbox/AndroidAuthenticator.java:44:            StringBuilder sbM26m = Insets$$ExternalSyntheticOutline0.m26m("Got null auth token for type: ");
+decompiled/java/sources/com/android/volley/toolbox/AndroidAuthenticator.java:48:            throw new AuthFailureError("Error while retrieving auth token", e);
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:12:import java.net.HttpURLConnection;
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:30:        private final HttpURLConnection mConnection;
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:32:        public UrlConnectionInputStream(HttpURLConnection httpURLConnection) {
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:52:    private void addBody(HttpURLConnection httpURLConnection, Request<?> request, byte[] bArr) throws IOException {
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:63:    private void addBodyIfExists(HttpURLConnection httpURLConnection, Request<?> request) throws IOException, AuthFailureError {
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:89:    public static InputStream inputStreamFromConnection(HttpURLConnection httpURLConnection) {
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:97:    private HttpURLConnection openConnection(URL url, Request<?> request) throws IOException {
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:99:        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:100:        httpURLConnection.setInstanceFollowRedirects(HttpURLConnection.getFollowRedirects());
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:126:        HttpURLConnection httpURLConnectionOpenConnection = openConnection(new URL(url), request);
+decompiled/java/sources/com/android/volley/toolbox/HurlStack.java:150:    public final void setConnectionParametersForRequest(HttpURLConnection httpURLConnection, Request<?> request) throws IOException, AuthFailureError {
+decompiled/java/sources/com/bumptech/glide/annotation/compiler/C0954xf5aef71.java:3:/* JADX INFO: renamed from: com.bumptech.glide.annotation.compiler.GlideIndexer_GlideModule_com_bumptech_glide_integration_okhttp3_OkHttpLibraryGlideModule */
+decompiled/java/sources/com/bumptech/glide/annotation/compiler/C0954xf5aef71.java:5:@Index(modules = {"com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule"})
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:17:import java.net.HttpURLConnection;
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:35:    private HttpURLConnection urlConnection;
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:40:        public HttpURLConnection build(URL url) throws IOException {
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:41:            return (HttpURLConnection) url.openConnection();
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:46:        HttpURLConnection build(URL url) throws IOException;
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:56:    private HttpURLConnection buildAndConfigureConnection(URL url, Map<String, String> map) throws HttpException {
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:58:            HttpURLConnection httpURLConnectionBuild = this.connectionFactory.build(url);
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:73:    private static int getHttpStatusCodeOrInvalid(HttpURLConnection httpURLConnection) {
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:85:    private InputStream getStreamForSuccessfulRequest(HttpURLConnection httpURLConnection) throws HttpException {
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:121:        HttpURLConnection httpURLConnectionBuildAndConfigureConnection = buildAndConfigureConnection(url, map);
+decompiled/java/sources/com/bumptech/glide/load/data/HttpUrlFetcher.java:173:        HttpURLConnection httpURLConnection = this.urlConnection;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:1:package com.bumptech.glide.integration.okhttp;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:3:/* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:7:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$attr */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:36:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$color */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:48:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$dimen */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:77:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$drawable */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:97:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$id */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:140:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$integer */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:148:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$layout */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:162:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$string */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:171:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$style */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp/C0958R.java:186:    /* JADX INFO: renamed from: com.bumptech.glide.integration.okhttp.R$styleable */
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:1:package com.bumptech.glide.integration.okhttp3;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:15:import okhttp3.Call;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:16:import okhttp3.Callback;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:17:import okhttp3.Request;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:18:import okhttp3.Response;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:19:import okhttp3.ResponseBody;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:84:    @Override // okhttp3.Callback
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpStreamFetcher.java:92:    @Override // okhttp3.Callback
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpUrlLoader.java:1:package com.bumptech.glide.integration.okhttp3;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpUrlLoader.java:10:import okhttp3.Call;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpUrlLoader.java:11:import okhttp3.OkHttpClient;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpLibraryGlideModule.java:1:package com.bumptech.glide.integration.okhttp3;
+decompiled/java/sources/com/bumptech/glide/integration/okhttp3/OkHttpGlideModule.java:1:package com.bumptech.glide.integration.okhttp3;
+decompiled/java/sources/com/bumptech/glide/GeneratedAppGlideModuleImpl.java:6:import com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule;
+decompiled/java/sources/com/bumptech/glide/GeneratedAppGlideModuleImpl.java:19:            Log.d("Glide", "Discovered LibraryGlideModule from annotation: com.bumptech.glide.integration.okhttp3.OkHttpLibraryGlideModule");
+decompiled/java/sources/com/boxbrapks/PasswordEditText.java:4:import android.content.SharedPreferences;
+decompiled/java/sources/com/boxbrapks/PasswordEditText.java:22:        SharedPreferences sharedPreferences = context.getSharedPreferences("XpLoginPref", 0);
+decompiled/java/sources/com/boxbrapks/UsernameEditText.java:4:import android.content.SharedPreferences;
+decompiled/java/sources/com/boxbrapks/UsernameEditText.java:22:        SharedPreferences sharedPreferences = context.getSharedPreferences("XpLoginPref", 0);
+decompiled/java/sources/com/boxbrapks/model/UserAccountModel.java:16:    public String password;
+decompiled/java/sources/com/boxbrapks/task/BxCheckUserTask.java:13:    private String password;
+decompiled/java/sources/com/boxbrapks/task/BxCheckUserTask.java:26:    public BxCheckUserTask(Context context, LoginTaskResponse responseHandler, String username, String password, String url) {
+decompiled/java/sources/com/boxbrapks/task/BxCheckUserTask.java:29:        this.password = password;
+decompiled/java/sources/com/boxbrapks/task/BxValidateLoginTask.java:15:    private String password;
+decompiled/java/sources/com/boxbrapks/BxLoginActivity.java:36:    EditText et_password;
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/SubtitleView.java:102:        if (view instanceof WebViewSubtitleOutput) {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/SubtitleView.java:103:            ((WebViewSubtitleOutput) view).destroy();
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/SubtitleView.java:169:            setView(new WebViewSubtitleOutput(getContext()));
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/PlayerNotificationManager.java:618:            MediaSessionCompat.Token token = this.mediaSessionToken;
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/PlayerNotificationManager.java:619:            if (token != null) {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/PlayerNotificationManager.java:620:                mediaStyle.setMediaSession(token);
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/PlayerNotificationManager.java:745:    public final void setMediaSessionToken(MediaSessionCompat.Token token) {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/PlayerNotificationManager.java:746:        if (Util.areEqual(this.mediaSessionToken, token)) {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/PlayerNotificationManager.java:749:        this.mediaSessionToken = token;
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:8:import android.webkit.WebView;
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:24:final class WebViewSubtitleOutput extends FrameLayout implements SubtitleView.Output {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:33:    private final WebView webView;
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:35:    /* JADX INFO: renamed from: com.google.android.exoplayer2.ui.WebViewSubtitleOutput$2 */
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:58:    public WebViewSubtitleOutput(Context context) {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:130:    private void updateWebView() {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:151:        WebViewSubtitleOutput webViewSubtitleOutput = this;
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:381:        updateWebView();
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:402:            updateWebView();
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:408:    public WebViewSubtitleOutput(Context context, @Nullable AttributeSet attributeSet) {
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:417:        WebView webView = new WebView(context, attributeSet) { // from class: com.google.android.exoplayer2.ui.WebViewSubtitleOutput.1
+decompiled/java/sources/com/google/android/exoplayer2/p015ui/WebViewSubtitleOutput.java:418:            @Override // android.webkit.WebView, android.view.View
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:282:        private final SecretKeySpec secretKeySpec;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:286:            SecretKeySpec secretKeySpec;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:292:                    secretKeySpec = new SecretKeySpec(bArr, "AES");
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:299:                secretKeySpec = null;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:303:            this.secretKeySpec = secretKeySpec;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:351:                                this.cipher.init(2, (Key) Util.castNonNull(this.secretKeySpec), new IvParameterSpec(bArr));
+decompiled/java/sources/com/google/android/exoplayer2/upstream/cache/CachedContentIndex.java:429:                            ((Cipher) Util.castNonNull(this.cipher)).init(1, (Key) Util.castNonNull(this.secretKeySpec), new IvParameterSpec(bArr));
+decompiled/java/sources/com/google/android/exoplayer2/upstream/crypto/AesCipherDataSink.java:17:    private final byte[] secretKey;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/crypto/AesCipherDataSink.java:33:        this.cipher = new AesFlushingCipher(1, this.secretKey, dataSpec.key, dataSpec.position + dataSpec.uriPositionOffset);
+decompiled/java/sources/com/google/android/exoplayer2/upstream/crypto/AesCipherDataSink.java:54:        this.secretKey = bArr;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/crypto/AesCipherDataSource.java:19:    private final byte[] secretKey;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/crypto/AesCipherDataSource.java:24:        this.secretKey = bArr;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/crypto/AesCipherDataSource.java:53:        this.cipher = new AesFlushingCipher(2, this.secretKey, dataSpec.key, dataSpec.position + dataSpec.uriPositionOffset);
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:23:import java.net.HttpURLConnection;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:48:    private HttpURLConnection connection;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:225:        HttpURLConnection httpURLConnection = this.connection;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:260:    private static boolean isCompressed(HttpURLConnection httpURLConnection) {
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:264:    private HttpURLConnection makeConnection(DataSpec dataSpec) throws IOException {
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:288:            HttpURLConnection httpURLConnectionMakeConnection = makeConnection(urlHandleRedirect, i3, bArr2, j3, j2, zIsFlagSet, false, dataSpec.httpRequestHeaders);
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:314:    private static void maybeTerminateInputStream(@Nullable HttpURLConnection httpURLConnection, long j) {
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:329:            if ("com.android.okhttp.internal.http.HttpTransport$ChunkedInputStream".equals(name) || "com.android.okhttp.internal.http.HttpTransport$FixedLengthInputStream".equals(name)) {
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:433:        HttpURLConnection httpURLConnection = this.connection;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:440:        HttpURLConnection httpURLConnection = this.connection;
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:456:            HttpURLConnection httpURLConnectionMakeConnection = makeConnection(dataSpec);
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:588:    private HttpURLConnection makeConnection(URL url, int i, @Nullable byte[] bArr, long j, long j2, boolean z, boolean z2, Map<String, String> map) throws IOException {
+decompiled/java/sources/com/google/android/exoplayer2/upstream/DefaultHttpDataSource.java:589:        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+decompiled/java/sources/com/google/android/gms/common/api/BatchResult.java:26:        Preconditions.checkArgument(batchResultToken.mId < this.zab.length, "The result token does not belong to this batch");
+decompiled/java/sources/com/google/android/gms/common/data/DataBufferUtils.java:16:    public static final String KEY_NEXT_PAGE_TOKEN = "next_page_token";
+decompiled/java/sources/com/google/android/gms/common/data/DataBufferUtils.java:20:    public static final String KEY_PREV_PAGE_TOKEN = "prev_page_token";
+decompiled/java/sources/com/google/android/gms/common/util/SharedPreferencesUtils.java:4:import android.content.SharedPreferences;
+decompiled/java/sources/com/google/android/gms/common/util/SharedPreferencesUtils.java:11:public class SharedPreferencesUtils {
+decompiled/java/sources/com/google/android/gms/common/util/SharedPreferencesUtils.java:12:    private SharedPreferencesUtils() {
+decompiled/java/sources/com/google/android/gms/common/util/SharedPreferencesUtils.java:17:    public static void publishWorldReadableSharedPreferences(@NonNull Context context, @NonNull SharedPreferences.Editor editor, @NonNull String str) {
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:342:        sb.append("Unexpected token: ");
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:409:                        sb.append("Unexpected token ");
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:454:        sb2.append("Unexpected token ");
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:523:            sb.append("Unexpected token: ");
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:542:                    sb2.append("Unexpected token: ");
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:620:        sb.append("Unexpected token: ");
+decompiled/java/sources/com/google/android/gms/common/server/response/FastParser.java:827:                        sb.append("Unexpected token: ");
+decompiled/java/sources/com/google/android/gms/auth/api/signin/internal/Storage.java:4:import android.content.SharedPreferences;
+decompiled/java/sources/com/google/android/gms/auth/api/signin/internal/Storage.java:31:    private final SharedPreferences zad;
+decompiled/java/sources/com/google/android/gms/auth/api/signin/internal/Storage.java:35:        this.zad = context.getSharedPreferences("com.google.android.gms.signin", 0);
+decompiled/java/sources/com/google/android/gms/auth/api/signin/GoogleSignInAccount.java:141:        GoogleSignInAccount googleSignInAccountZaa = zaa(jSONObject.optString(TtmlNode.ATTR_ID), jSONObject.has("tokenId") ? jSONObject.optString("tokenId") : null, jSONObject.has("email") ? jSONObject.optString("email") : null, jSONObject.has("displayName") ? jSONObject.optString("displayName") : null, jSONObject.has("givenName") ? jSONObject.optString("givenName") : null, jSONObject.has("familyName") ? jSONObject.optString("familyName") : null, uri, Long.valueOf(j), jSONObject.getString("obfuscatedIdentifier"), hashSet);
+decompiled/java/sources/com/google/android/gms/auth/api/signin/GoogleSignInAccount.java:275:                jSONObject.put("tokenId", getIdToken());
+decompiled/java/sources/com/google/android/material/C1207R.java:794:        public static final int passwordToggleContentDescription = 2130969496;
+decompiled/java/sources/com/google/android/material/C1207R.java:795:        public static final int passwordToggleDrawable = 2130969497;
+decompiled/java/sources/com/google/android/material/C1207R.java:796:        public static final int passwordToggleEnabled = 2130969498;

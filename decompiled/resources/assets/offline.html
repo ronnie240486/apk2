@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Video Slideshow</title>
+    <link rel="icon" href="data:,">
+    <style>
+        body {
+            margin: 0; /* Remove margens */
+            padding: 0; /* Remove padding */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Impede rolagem se o conteúdo for maior que a tela */
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Impede conteúdo de transbordar */
+        }
+
+        .slideshow-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden; /* Impede transbordamento do conteúdo */
+        }
+
+        img, video {
+            width: 100%; /* Garante que a largura ocupe 100% do container */
+            height: 100%; /* Garante que a altura ocupe 100% do container */
+            object-fit: fill; /* Cobre todo o espaço disponível, cortando se necessário */
+            border-radius: 5px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .active {
+            opacity: 1; /* Torna o slide ativo visível */
+        }
+
+        /* Estilo para a marca d'água */
+        .watermark {
+            position: absolute;
+            bottom: 0px; /* Ajuste a posição vertical conforme necessário */
+            left: 0px; /* Ajuste a posição horizontal conforme necessário */
+            width: 30px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            opacity: 0.5; /* Deixa a logo translúcida */
+            z-index: 1; /* Certifica-se que a logo esteja sobre o slide */
+        }
+        
+        .top-overlay {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left,  
+                rgba(0, 0, 0, 0.6) 0%,  
+                rgba(0, 0, 0, 0.1) 80%,  
+                rgba(0, 0, 0, 0.6) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slideshow-container" id="slideshow">
+            <!-- Slides dinâmicos serão inseridos aqui -->
+        </div>
+    </div>
+</body>
+</html>

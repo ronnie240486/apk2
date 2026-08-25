@@ -1,0 +1,33 @@
+== contagens ==
+java_files=7594
+text_resource_files=1426
+publish_size=82M
+== pacotes principais ==
+   3595 com
+   1415 androidx
+    809 org
+    614 kotlin
+    497 kotlinx
+    276 io
+    138 okhttp3
+     59 retrofit2
+     53 okio
+     49 pl
+     31 javax
+     19 android
+     12 eightbitlab
+      9 p029zz
+      7 at
+      6 iptv
+      2 p013b
+      1 p030
+      1 p023x
+      1 p000Lc
+== hashes do material de análise ==
+0a8a00367dc0dd994f2ccc5069e2a63128d621671ab5888bbdfb4e8945334ec5  publish/analysis/code_indicators.txt
+738d6d42c42ed35410df31d8814aa972985c931765e53bccdfeb49167cd1fcb4  publish/analysis/AndroidManifest.xml
+78e0431a4fb547128923f66e3b2fb1957c650efe9c5917193a46006c9a7fce6d  publish/analysis/apk_metadata.json
+81aac4aa8f181726f00c719c618acec33efd730c5f32eb553edd5b0f7c5c875c  publish/analysis/native_indicators.txt
+a61f0412c1a8c986ba105180ee3a1b0197a4b3620aeb33b65d39e541193eaee0  publish/analysis/url_scan.txt
+d436149a9583c1ea189fdfbdf25518c2ad9840e5cc97b94c60e7c7c6b9b36d37  publish/analysis/inventory.txt
+e8f54a968ecb7496e4bb981cd94d3031587e01b6b531891dd86fa478d0369e57  publish/analysis/secret_scan.txt

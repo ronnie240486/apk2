@@ -1,0 +1,21 @@
+# Binários e material de origem não publicado
+*.apk
+*.aab
+*.so
+/tools/
+original/
+
+# Logs e caches
+*.log
+**/.gradle/
+**/build/
+__pycache__/
+*.pyc
+
+# Dados locais e credenciais
+.env
+.env.*
+*.keystore
+*.jks
+*.pem
+*.key

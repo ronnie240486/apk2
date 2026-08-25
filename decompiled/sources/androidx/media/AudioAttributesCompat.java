@@ -1,0 +1,238 @@
+package androidx.media;
+
+import android.media.AudioAttributes;
+import android.os.Build;
+import android.util.SparseIntArray;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RestrictTo;
+import androidx.core.graphics.Insets$$ExternalSyntheticOutline0;
+import androidx.versionedparcelable.VersionedParcelable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+/* JADX INFO: loaded from: classes.dex */
+public class AudioAttributesCompat implements VersionedParcelable {
+    public static final int CONTENT_TYPE_MOVIE = 3;
+    public static final int CONTENT_TYPE_MUSIC = 2;
+    public static final int CONTENT_TYPE_SONIFICATION = 4;
+    public static final int CONTENT_TYPE_SPEECH = 1;
+    public static final int CONTENT_TYPE_UNKNOWN = 0;
+    public static final int FLAG_AUDIBILITY_ENFORCED = 1;
+    public static final int FLAG_HW_AV_SYNC = 16;
+    private static final int[] SDK_USAGES;
+    private static final int SUPPRESSIBLE_CALL = 2;
+    private static final int SUPPRESSIBLE_NOTIFICATION = 1;
+    private static final SparseIntArray SUPPRESSIBLE_USAGES;
+    public static final int USAGE_ALARM = 4;
+    public static final int USAGE_ASSISTANCE_ACCESSIBILITY = 11;
+    public static final int USAGE_ASSISTANCE_NAVIGATION_GUIDANCE = 12;
+    public static final int USAGE_ASSISTANCE_SONIFICATION = 13;
+    public static final int USAGE_ASSISTANT = 16;
+    public static final int USAGE_GAME = 14;
+    public static final int USAGE_MEDIA = 1;
+    public static final int USAGE_NOTIFICATION = 5;
+    public static final int USAGE_NOTIFICATION_COMMUNICATION_DELAYED = 9;
+    public static final int USAGE_NOTIFICATION_COMMUNICATION_INSTANT = 8;
+    public static final int USAGE_NOTIFICATION_COMMUNICATION_REQUEST = 7;
+    public static final int USAGE_NOTIFICATION_EVENT = 10;
+    public static final int USAGE_NOTIFICATION_RINGTONE = 6;
+    public static final int USAGE_UNKNOWN = 0;
+    public static final int USAGE_VOICE_COMMUNICATION = 2;
+    public static final int USAGE_VOICE_COMMUNICATION_SIGNALLING = 3;
+    public static boolean sForceLegacyBehavior;
+
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public AudioAttributesImpl mImpl;
+
+    /* JADX INFO: loaded from: classes2.dex */
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public @interface AttributeContentType {
+    }
+
+    /* JADX INFO: loaded from: classes2.dex */
+    @Retention(RetentionPolicy.SOURCE)
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public @interface AttributeUsage {
+    }
+
+    /* JADX INFO: loaded from: classes2.dex */
+    public static abstract class AudioManagerHidden {
+        public static final int STREAM_ACCESSIBILITY = 10;
+        public static final int STREAM_BLUETOOTH_SCO = 6;
+        public static final int STREAM_SYSTEM_ENFORCED = 7;
+        public static final int STREAM_TTS = 9;
+
+        private AudioManagerHidden() {
+        }
+    }
+
+    static {
+        SparseIntArray sparseIntArray = new SparseIntArray();
+        SUPPRESSIBLE_USAGES = sparseIntArray;
+        sparseIntArray.put(5, 1);
+        sparseIntArray.put(6, 2);
+        sparseIntArray.put(7, 2);
+        sparseIntArray.put(8, 1);
+        sparseIntArray.put(9, 1);
+        sparseIntArray.put(10, 1);
+        SDK_USAGES = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16};
+    }
+
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public AudioAttributesCompat() {
+    }
+
+    @RestrictTo({RestrictTo.Scope.LIBRARY})
+    public static void setForceLegacyBehavior(boolean force) {
+        sForceLegacyBehavior = force;
+    }
+
+    public static int toVolumeStreamType(boolean fromGetVolumeControlStream, int flags, int usage) {
+        if ((flags & 1) == 1) {
+            return fromGetVolumeControlStream ? 1 : 7;
+        }
+        if ((flags & 4) == 4) {
+            return fromGetVolumeControlStream ? 0 : 6;
+        }
+        switch (usage) {
+            case 0:
+            case 1:
+            case 12:
+            case 14:
+            case 16:
+                return 3;
+            case 2:
+                return 0;
+            case 3:
+                return fromGetVolumeControlStream ? 0 : 8;
+            case 4:
+                return 4;
+            case 5:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+                return 5;
+            case 6:
+                return 2;
+            case 11:
+                return 10;
+            case 13:
+                return 1;
+            case 15:
+            default:
+                if (fromGetVolumeControlStream) {
+                    throw new IllegalArgumentException(Insets$$ExternalSyntheticOutline0.m16m("Unknown usage value ", usage, " in audio attributes"));
+                }
+                return 3;
+        }
+    }
+
+    @Nullable
+    public static AudioAttributesCompat wrap(@NonNull final Object aa) {
+        if (sForceLegacyBehavior) {
+            return null;
+        }
+        return Build.VERSION.SDK_INT >= 26 ? new AudioAttributesCompat(new AudioAttributesImplApi26((AudioAttributes) aa)) : new AudioAttributesCompat(new AudioAttributesImplApi21((AudioAttributes) aa));
+    }
+
+    public boolean equals(Object o) {
+        if (!(o instanceof AudioAttributesCompat)) {
+            return false;
+        }
+        AudioAttributesCompat audioAttributesCompat = (AudioAttributesCompat) o;
+        AudioAttributesImpl audioAttributesImpl = this.mImpl;
+        if (audioAttributesImpl == null) {
+            return audioAttributesCompat.mImpl == null;
+        }
+        return audioAttributesImpl.equals(audioAttributesCompat.mImpl);
+    }
+
+    public int getContentType() {
+        return this.mImpl.getContentType();
+    }
+
+    public int getFlags() {
+        return this.mImpl.getFlags();
+    }
+
+    public int getLegacyStreamType() {
+        return this.mImpl.getLegacyStreamType();
+    }
+
+    public int getUsage() {
+        return this.mImpl.getUsage();
+    }
+
+    public int getVolumeControlStream() {
+        return this.mImpl.getVolumeControlStream();
+    }
+
+    public int hashCode() {
+        return this.mImpl.hashCode();
+    }
+
+    public String toString() {
+        return this.mImpl.toString();
+    }
+
+    @Nullable
+    public Object unwrap() {
+        return this.mImpl.getAudioAttributes();
+    }
+
+    public AudioAttributesCompat(AudioAttributesImpl impl) {
+        this.mImpl = impl;
+    }
+
+    /* JADX INFO: loaded from: classes2.dex */
+    public static class Builder {
+        public final AudioAttributesImpl.Builder mBuilderImpl;
+
+        public Builder() {
+            if (AudioAttributesCompat.sForceLegacyBehavior) {
+                this.mBuilderImpl = new AudioAttributesImplBase.Builder();
+            } else if (Build.VERSION.SDK_INT >= 26) {
+                this.mBuilderImpl = new AudioAttributesImplApi26.Builder();
+            } else {
+                this.mBuilderImpl = new AudioAttributesImplApi21.Builder();
+            }
+        }
+
+        public AudioAttributesCompat build() {
+            return new AudioAttributesCompat(this.mBuilderImpl.build());
+        }
+
+        public Builder setContentType(int contentType) {
+            this.mBuilderImpl.setContentType(contentType);
+            return this;
+        }
+
+        public Builder setFlags(int flags) {
+            this.mBuilderImpl.setFlags(flags);
+            return this;
+        }
+
+        public Builder setLegacyStreamType(int streamType) {
+            this.mBuilderImpl.setLegacyStreamType(streamType);
+            return this;
+        }
+
+        public Builder setUsage(int usage) {
+            this.mBuilderImpl.setUsage(usage);
+            return this;
+        }
+
+        public Builder(AudioAttributesCompat aa) {
+            if (AudioAttributesCompat.sForceLegacyBehavior) {
+                this.mBuilderImpl = new AudioAttributesImplBase.Builder(aa);
+            } else if (Build.VERSION.SDK_INT >= 26) {
+                this.mBuilderImpl = new AudioAttributesImplApi26.Builder(aa.unwrap());
+            } else {
+                this.mBuilderImpl = new AudioAttributesImplApi21.Builder(aa.unwrap());
+            }
+        }
+    }
+}
